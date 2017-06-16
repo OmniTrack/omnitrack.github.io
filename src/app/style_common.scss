@@ -1,0 +1,24 @@
+$content_hor_padding: 16px;
+$color_accent: #d43861;
+
+.content_padded{
+    padding: 0px $content_hor_padding;
+}
+
+h1{
+    color: $color_accent;
+    font-weight: 400;
+}
+
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}

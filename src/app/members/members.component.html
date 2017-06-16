@@ -1,0 +1,18 @@
+<h1 id="section_team">The OmniTrack Team</h1>
+<div class="members">
+  <div class="member" *ngFor="let member of members">
+    <div class="thumb">
+    </div>
+    <div class="name">
+      {{member.name}}
+    </div>
+    <div class="description">
+      {{member.title}}<br>
+      {{member.affiliation}}<br>
+      <span class="email">
+      {{member.email}}
+      </span>
+    </div>
+
+  </div>
+</div>

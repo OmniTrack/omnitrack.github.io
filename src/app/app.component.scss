@@ -1,0 +1,47 @@
+@import "style_common.scss";
+
+$header_height: 60px;
+
+#header{
+        background: white;
+        height: $header_height;
+        
+        @include box-shadow(0px, 1px, 6px, rgba(113, 8, 8, 0.78));
+        background-color: white;
+}
+
+#header_content{
+    position: relative;
+    height: $header_height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px $content_hor_padding;
+
+
+    position: relative;
+    z-index: 100;
+
+    .logo{
+        width: 160px;
+        margin-left: -6px;
+    }
+
+    #gnb{
+        padding-top: 2px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #575757;
+        li{
+            display:inline-block;
+            margin-left: 30px;
+        }
+
+        li:first-child{
+            margin-left: 0px;
+        }
+    }
+}
+
+#main{
+}

@@ -1,0 +1,24 @@
+div.members{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    div.member{
+        width: 240px;
+        font-size: 14px;
+        display:inline-block;
+        text-align: center;
+        
+        .name{
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .description{
+            margin-top: 6px;
+            line-height: 1.4em;
+            .email{
+                color: #dc613c;
+            }
+        }
+    }
+}

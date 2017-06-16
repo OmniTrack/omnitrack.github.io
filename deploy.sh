@@ -1,1 +1,3 @@
-ng build --prod --base-href "https://omnitrack.github.io/gh-pages"
+ng build --prod
+angular-cli-ghpages --branch=master
+
