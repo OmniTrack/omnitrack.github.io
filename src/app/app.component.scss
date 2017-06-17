@@ -41,7 +41,7 @@ $header_height: 60px;
             margin-left: 0px;
         }
 
-        @media screen and (max-width: 700px){
+        @include respond_to_mobile(){
             visibility: hidden;
         }
     }

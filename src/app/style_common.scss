@@ -8,10 +8,21 @@ $color_gradient_end: #ef9a23;
     padding: 0px $content_hor_padding;
 }
 
+
+@mixin respond_to_mobile(){
+  @media screen and (max-width: 640px){
+        @content;
+    }
+}
+
 h1{
     color: $color_accent;
-    font-weight: 400;
+    font-weight: 300;
+    @include respond_to_mobile(){
+        font-size: 16pt;
+    }
 }
+
 
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
   /* fallback/image non-cover color */

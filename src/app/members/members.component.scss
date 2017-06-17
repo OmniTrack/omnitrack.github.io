@@ -1,35 +1,94 @@
+@import "../style_common.scss";
+
 div.members{
     display: flex;
     justify-content: space-between;
     padding: 0px;
+
+
+    @include respond_to_mobile(){
+        justify-content: inherit;
+        display: block;
+    }
+
+    div.member:hover{
+        background: #e0e0e0;
+    }
+
     div.member{
         width: 240px;
-        font-size: 14px;
-        display:inline-block;
-        text-align: center;
+        border-radius: 12px;
+        @include respond_to_mobile(){
+            width: inherit;
+        }
 
-        .thumb{
-            width: 75%;
-            margin: 0px auto;
-            margin-bottom: 12px;
+            cursor: pointer;
+
+        a{
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        .member_content{
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+            display:inline-block;
+            text-align: center;
+            @include respond_to_mobile(){
+                text-align: left;
+                display: flex;
+                justify-content: center;
+                margin-top: 25px;
+            }
+
+            .thumb{
+
+                pointer-events: none;
+                width: 75%;
+                margin: 0px auto;
+                margin-bottom: 12px;
+
+                @include respond_to_mobile(){
+                    width: 128px;
+                    height: 128px;
+                    margin-bottom: 0px;
+                }
+                
+                img{
+                    width: 100%;
+                    border-radius: 2000px;
+                }
+            }
             
-            img{
-                width: 100%;
-                border-radius: 2000px;
+            .information{
+
+                pointer-events: none;
+                @include respond_to_mobile(){
+                    flex: 1;
+                    align-self: center;
+                    margin-left: 18px;
+                }
+
+                .name{
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+                
+                .description{
+                    margin-top: 6px;
+                    line-height: 1.4em;
+                    .email{
+                        color: #dc613c;
+                    }
+                }
             }
         }
-        
-        .name{
-            font-size: 16px;
-            font-weight: 600;
-        }
-        
-        .description{
-            margin-top: 6px;
-            line-height: 1.4em;
-            .email{
-                color: #dc613c;
-            }
+    }
+
+    div.member:first-child{
+        @include respond_to_mobile(){
+            margin-top: 0px;
         }
     }
 }

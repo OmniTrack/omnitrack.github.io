@@ -1,3 +1,5 @@
+@import "../style_common.scss";
+
 #main_banner{
     background: url("/assets/images/main_banner_background.jpg") no-repeat center center; 
     -webkit-background-size: cover;
@@ -11,7 +13,7 @@
     
     height: 520px;
 
-    @media screen and (max-width: 700px){
+    @include respond_to_mobile(){
         height: 400px;
     }
 
@@ -31,9 +33,7 @@
             line-height: 2em;
         }
 
-            
-            
-        @media screen and (max-width: 700px){
+        @include respond_to_mobile(){
            padding-top: 20px;
            .desc_headline{
                font-size: 20pt;
