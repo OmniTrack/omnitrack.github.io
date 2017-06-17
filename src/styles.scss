@@ -4,25 +4,6 @@ $color_accent: #d43861;
 $color_gradient_start: #dd4255;
 $color_gradient_end: #ef9a23;
 
-.content_padded{
-    padding: 0px $content_hor_padding;
-}
-
-
-@mixin respond_to_mobile(){
-  @media screen and (max-width: 640px){
-        @content;
-    }
-}
-
-h1{
-    color: $color_accent;
-    font-weight: 300;
-    @include respond_to_mobile(){
-        font-size: 16pt;
-    }
-}
-
 
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
   /* fallback/image non-cover color */
@@ -51,6 +32,12 @@ h1{
 }
 
 
+@mixin respond_to_mobile(){
+  @media screen and (max-width: 720px){
+        @content;
+    }
+}
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;
@@ -61,4 +48,62 @@ h1{
     -moz-box-shadow: $top $left $blur $color;
     box-shadow: $top $left $blur $color;
   }
+}
+
+//https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+body{
+    font-family: 'Open Sans', 'sans-serif';
+    background: #fafafa;
+    padding: 0px;
+    margin: 0px;
+}
+
+.center_content{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content_padded{
+    padding: 0px $content_hor_padding;
+}
+
+
+h1{
+    color: $color_accent;
+    font-weight: 300;
+    margin-top: 2em;
+    @include respond_to_mobile(){
+        font-size: 20pt;
+    }
+}
+
+p{
+    font-size: 15pt;
+    font-weight: 400;
+    line-height: 1.8em;
+    margin-top: 0px;
+    margin-bottom: 1.5em;
+
+    color: #252525;
+    @include respond_to_mobile(){
+        font-size: 12pt;
+    }
 }

@@ -1,4 +1,4 @@
-@import "../style_common.scss";
+@import "../../styles.scss";
 
 #main_banner{
     background: url("/assets/images/main_banner_background.jpg") no-repeat center center; 
@@ -29,8 +29,21 @@
 
         .desc_message{
             margin-top: 20px;
-            font-size: 16pt;
+            font-size: 17pt;
             line-height: 2em;
+            font-weight: 400;
+        }
+
+        .desc_features{
+            padding-left: 24px;
+            font-size: 14pt;
+            li{
+                margin-top: 0.7em;
+            }
+
+            li:first-child{
+                margin-top: 0px;
+            }
         }
 
         @include respond_to_mobile(){
@@ -42,6 +55,10 @@
            .desc_message{
                font-size: 12pt;
                line-height: 1.5em;
+           }
+
+           .desc_features{
+               font-size: 12pt;
            }
             
         }
