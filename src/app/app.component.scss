@@ -43,5 +43,18 @@ $header_height: 60px;
     }
 }
 
+#footer{
+    margin-top: 40px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    @include horizontal-gradient($color_gradient_start, $color_gradient_end);
+
+    #footer_content{
+        text-align: center;
+        color: white;
+        font-size: 12px;
+    }
+}
+
 #main{
 }
