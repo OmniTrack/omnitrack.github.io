@@ -7,6 +7,17 @@ div.members{
         font-size: 14px;
         display:inline-block;
         text-align: center;
+
+        .thumb{
+            width: 75%;
+            margin: 0px auto;
+            margin-bottom: 12px;
+            
+            img{
+                width: 100%;
+                border-radius: 2000px;
+            }
+        }
         
         .name{
             font-size: 16px;
