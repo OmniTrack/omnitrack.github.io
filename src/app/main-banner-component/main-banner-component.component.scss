@@ -6,7 +6,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
+    overflow: hidden;
     position: relative;
     z-index: -100;
 
@@ -14,7 +14,33 @@
     height: 520px;
 
     @include respond_to_mobile(){
-        height: 400px;
+        height: inherit;
+    }
+
+    .center_content{
+        position: relative;
+        height: 100%;
+    }
+
+    .smartphone_wrapper{
+        position: absolute;
+        z-index: -50;
+            bottom: -12px;
+            right: -60px;
+
+        @include respond_to_mobile(){
+            position: inherit;
+            transform: scale(0.7, 0.7);
+            bottom: inherit;
+            right: inherit;
+        }
+
+        .smartphone_device{
+            display: block;
+            width: 756px;
+            height: 508px;
+            background-image: url("/assets/images/smartphone.png");
+        }
     }
 
     .description{
