@@ -32,7 +32,7 @@ div.members{
         .member_content{
             width: 100%;
             padding: 5px;
-            font-size: 14px;
+            font-size: 11pt;
             display:inline-block;
             text-align: center;
             @include respond_to_mobile(){
@@ -71,7 +71,7 @@ div.members{
                 }
 
                 .name{
-                    font-size: 16px;
+                    font-size: 13pt;
                     font-weight: 600;
                 }
                 

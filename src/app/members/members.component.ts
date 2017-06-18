@@ -15,10 +15,18 @@ export class MembersComponent implements OnInit {
       {
         name: "Young-Ho Kim",
         title: "Ph.D Candidate",
-        affiliation: "Seoul National University",
+        affiliation: "Seoul Nat'l University",
         email: "yhkim (at) hcil.snu.ac.kr",
         web: "http://younghokim.net",
         thumb:"yhkim_portrait.jpg"
+      },
+      {
+        name: "Jae Ho Jeon",
+        title: "Developer",
+        affiliation: "Kakao Corporation",
+        email: "jay.jh (at) kakaocorp.com",
+        web: "#",
+        thumb:"jhjeon_portrait.jpg"
       },
       {
         name: "Bongshin Lee",
@@ -31,7 +39,7 @@ export class MembersComponent implements OnInit {
       {
         name: "Eun Kyoung Choe",
         title: "Assistant Professor",
-        affiliation: "The Pennsylvania State University",
+        affiliation: "Penn State",
         email: "echoe (at) ist.psu.edu",
         web:"https://faculty.ist.psu.edu/choe/",
         thumb:"choe_portrait.png"
@@ -39,7 +47,7 @@ export class MembersComponent implements OnInit {
       {
         name: "Jinwook Seo",
         title: "Associate Professor",
-        affiliation: "Seoul National University",
+        affiliation: "Seoul Nat'l University",
         email: "jseo (at) snu.ac.kr",
         web:"http://hcil.snu.ac.kr/people/jinwook-seo",
         thumb:"jseo_portrait.jpg"

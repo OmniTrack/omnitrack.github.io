@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { MainBannerComponentComponent } from './main-banner-component/main-banner-component.component';
 import { MembersComponent } from './members/members.component';
 import { AboutComponent } from './about/about.component';
+import { PublicationsComponent } from './publications/publications.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainBannerComponentComponent,
     MembersComponent,
-    AboutComponent
+    AboutComponent,
+    PublicationsComponent
   ],
   imports: [
     BrowserModule

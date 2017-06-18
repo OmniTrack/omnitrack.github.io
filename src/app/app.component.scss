@@ -44,6 +44,22 @@ $header_height: 60px;
         @include respond_to_mobile(){
             visibility: hidden;
         }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:link{
+            color: inherit;
+        }
+
+        a:visited{
+            color: inherit;
+        }
+
+        a:hover{
+            color: $color_accent;
+        }
     }
 }
 
@@ -56,7 +72,7 @@ $header_height: 60px;
     #footer_content{
         text-align: center;
         color: white;
-        font-size: 12px;
+        font-size: 10pt;
     }
 }
 
