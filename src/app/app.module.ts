@@ -6,6 +6,8 @@ import { MainBannerComponentComponent } from './main-banner-component/main-banne
 import { MembersComponent } from './members/members.component';
 import { AboutComponent } from './about/about.component';
 import { PublicationsComponent } from './publications/publications.component';
+import { FeaturesComponent } from './features/features.component';
+import { AcknowledgementComponent } from './acknowledgement/acknowledgement.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import { PublicationsComponent } from './publications/publications.component';
     MainBannerComponentComponent,
     MembersComponent,
     AboutComponent,
-    PublicationsComponent
+    PublicationsComponent,
+    FeaturesComponent,
+    AcknowledgementComponent
   ],
   imports: [
     BrowserModule

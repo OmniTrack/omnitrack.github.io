@@ -1,0 +1,72 @@
+@import '../../styles.scss';
+
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+ul.service_list{
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -40px;
+    margin-top: -20px;
+    
+    > li{
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+    
+    ul.measure_list{
+        > li{
+            font-size: 13pt;
+            line-height: 1.5em;
+            @include respond_to_mobile(){
+                font-size: 11pt;
+            }
+        }
+    }
+}
+
+.double_column{
+    display: flex;
+    margin-bottom: $paragraph_margin_bottom;
+
+    @include respond_to_mobile(){
+        display: inherit;
+    }
+
+    > .left{
+        flex:1;
+            
+        @include respond_to_mobile(){
+            width: 100%;
+        }
+    }
+
+    > .right{
+        margin-left: 30px;
+        
+        @include respond_to_mobile(){
+            margin-left: 0px;
+            margin-top: 1em;
+        }
+    }
+}
+
+.horizontal_flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    >*{
+        margin-left: 8px;
+    }
+    margin-left: -8px;
+}
+
+.app_screen{    
+    width: 100%;
+    min-width: 200px;
+    margin-top: 10px;
+}

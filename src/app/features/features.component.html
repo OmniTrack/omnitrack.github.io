@@ -1,0 +1,56 @@
+<h1 id="section_features">Features</h1>
+<h2>Trackers: Design the flexible data inputs yourself</h2>
+<div class="double_column">
+  <div class="left horizontal_flex">
+    <div>
+      <img class="app_screen" src="/assets/images/features/tracker_list.jpg">
+    </div>
+
+    <div>
+      <img class="app_screen" src="/assets/images/features/attribute_list.jpg">
+    </div>
+  </div>
+  <div class="right">
+    <p>
+    You can design your own data format by configuring various data types such as number, text, time point, time range, choices, location, or audio records. <i>You can also change the configuration even if you've already been tracking data.</i>
+    </p>
+    <p>
+      The configuration UI is user-friendly, similar to that of form-building system such as Google Forms or Survey Monkey.
+    </p>
+  </div>
+</div>
+
+<h2>Services: Integrate external trackers and other services</h2>
+<p>
+  You can connect the external services to OmniTrack's data field. For example, you can connect <i>Fitbit step count</i> to a <i>number field</i>.
+</p>
+<div class="paragraph">
+  Currently, we support:
+  <div class="panel">
+    <ul class="service_list">
+      <li *ngFor="let service of externalServices">
+        <a href="{{service.link}}" target=_blank><div class="name">{{service.name}}</div></a>
+        <ul class="measure_list">
+          <li *ngFor="let measure of service.measures">
+            {{measure}}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h2>Triggers: Automate value retrieval and data logging</h2>
+<p>
+
+</p>
+
+<h2>Streamline tracking by shortcuts, widgets, and reminders</h2>
+<p>
+
+</p>
+
+<h2>Visualization and feedback</h2>
+<p>
+
+</p>

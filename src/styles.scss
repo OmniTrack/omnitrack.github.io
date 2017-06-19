@@ -1,8 +1,12 @@
 $content_hor_padding: 16px;
 $color_accent: #d43861;
+$color_pointed: #0594c4;
+$color_italic: #e26943;
 
 $color_gradient_start: #dd4255;
 $color_gradient_end: #ef9a23;
+
+$paragraph_margin_bottom: 1.5em;
 
 
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
@@ -89,23 +93,71 @@ body{
 h1{
     color: $color_accent;
     font-weight: 300;
-    margin-top: 2em;
+    margin-top: 2.3em;
     @include respond_to_mobile(){
         font-size: 20pt;
     }
+
+    &:before {
+        display: block;
+        content: "";
+        width: $content_hor_padding;
+        height: 3px;
+        margin-left: -$content_hor_padding;
+        background: $color_accent;
+    }
 }
 
-p{
+h2{
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+    font-size: 16pt;
+    font-weight: 600;
+    color: #252525;
+    @include respond_to_mobile(){
+        font-size: 13pt;
+    }
+
+    &:first-of-type{
+        margin-top: inherit;
+    }
+}
+
+p, .paragraph{
     font-size: 15pt;
     font-weight: 400;
     line-height: 1.8em;
     margin-top: 0px;
-    margin-bottom: 1.5em;
+    margin-bottom: $paragraph_margin_bottom;
 
     color: #252525;
     @include respond_to_mobile(){
         font-size: 12pt;
     }
+
+    i{
+        color: $color_italic;
+    }
+}
+
+strong{
+    font-weight: 600;
+}
+
+a:link, a:visited{
+    color: $color_pointed;
+    text-decoration: inherit;
+}
+
+a:hover, a:active{
+    text-decoration: underline;
+}
+
+.panel{
+    padding: $content_hor_padding;
+    background: #eeeeee;
+    margin-left: -$content_hor_padding;
+    margin-right: -$content_hor_padding;
 }
 
 @keyframes
