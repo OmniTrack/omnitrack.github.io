@@ -69,6 +69,10 @@ ul.service_list{
     width: 100%;
     min-width: 200px;
     margin-top: 10px;
+
+    @include respond_to_mobile(){
+        min-width: inherit;
+    }
 }
 
 .service_flow{
