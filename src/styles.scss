@@ -111,7 +111,7 @@ h1{
 h2{
     margin-top: 2em;
     margin-bottom: 0.3em;
-    font-size: 16pt;
+    font-size: 17pt;
     font-weight: 600;
     color: #252525;
     @include respond_to_mobile(){
@@ -121,6 +121,13 @@ h2{
     &:first-of-type{
         margin-top: inherit;
     }
+}
+
+h3{
+    color: #c74b61;
+    font-size: 16pt;
+    font-weight: 400;
+    margin-bottom: 0.4em;
 }
 
 p, .paragraph{

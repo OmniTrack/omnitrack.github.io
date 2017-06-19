@@ -26,7 +26,7 @@
   You can connect the external services to OmniTrack's data field. For example, you can connect <i>Fitbit step count</i> to a <i>number field</i>.
 </p>
 <div class="paragraph">
-  Example Flow
+  <h3>Example Flow</h3>
   <div class="service_flow position_relative">
     <img class="image_paragraph full_width" src="/assets/images/features/service_flow.jpg">
     <div class="message message1">
@@ -39,7 +39,7 @@
 </div>
 
 <div class="paragraph">
-  Currently Supported Measurements
+  <h3>Currently Supported Measurements</h3>
   <div class="panel">
     <ul class="service_list">
       <li *ngFor="let service of externalServices">
@@ -56,8 +56,22 @@
 
 <h2>Triggers: Automate value retrieval and data logging</h2>
 <p>
-
+  You can conduct an automatic tracking using <i>triggers</i>. Once triggers are fired, OmniTrack <u>retrieves tracking values from external services</u> and automatically logs the values.
 </p>
+<div class="paragraph">
+  OmniTrack supports two types of triggers:
+  <table class="trigger_types">
+    <tr>
+      <th>Time-based</th>
+      <td>Time-based triggers are fired either at the preset time or at periodic intervals.</td>
+    </tr>
+    <tr>
+      <th>Event-driven</th>
+      <td>Event-driven triggers are fired when a value from the external service passes the threshold.</td>
+    </tr>
+    
+  </table>
+</div>
 
 <h2>Streamline tracking by shortcuts, widgets, and reminders</h2>
 <p>

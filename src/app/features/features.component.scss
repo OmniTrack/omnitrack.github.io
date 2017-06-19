@@ -101,3 +101,16 @@ ul.service_list{
             left: 63%;
         }
 }
+
+table.trigger_types{
+    th{
+        text-align: left;
+        white-space: nowrap;
+        vertical-align: top;
+        font-weight: 600;
+    }
+
+    td{
+        padding-left: 0.8em;
+    }
+}
