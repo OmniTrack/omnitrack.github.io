@@ -156,8 +156,16 @@ a:hover, a:active{
 .panel{
     padding: $content_hor_padding;
     background: #eeeeee;
-    margin-left: -$content_hor_padding;
-    margin-right: -$content_hor_padding;
+    //margin-left: -$content_hor_padding;
+    //margin-right: -$content_hor_padding;
+}
+
+.full_width{
+    width: 100%;
+}
+
+.position_relative{
+    position: relative;
 }
 
 @keyframes

@@ -70,3 +70,30 @@ ul.service_list{
     min-width: 200px;
     margin-top: 10px;
 }
+
+.service_flow{
+    .message{
+        position: absolute;
+        width: 18%;
+        bottom: 0px;
+        background: rgba(5, 148, 196, 0.78);
+        line-height: 1.8em;
+        color: white;
+        padding: 0.5em 0.8em;
+        margin-bottom: 1.5em;
+        transform: translate(-50%);
+        font-weight:300;
+        font-size: 12pt;
+
+        @include respond_to_mobile(){
+            font-size: 8pt;
+        }
+    }
+    .message1{
+            left: 29%
+        }
+
+        .message2{
+            left: 63%;
+        }
+}
