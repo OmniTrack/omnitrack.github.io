@@ -82,6 +82,13 @@ ul.service_list{
     }
 }
 
+img.visualization_dashboard{
+    min-width: 400px;
+    @include respond_to_mobile(){
+        min-width: inherit;
+    }
+}
+
 .service_flow{
     .message{
         position: absolute;
