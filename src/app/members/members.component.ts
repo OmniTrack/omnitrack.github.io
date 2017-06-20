@@ -23,7 +23,7 @@ export class MembersComponent implements OnInit {
       {
         name: "Jae Ho Jeon",
         title: "Developer",
-        affiliation: "Kakao Corporation",
+        affiliation: "Kakao Corp.",
         email: "jay.jh (at) kakaocorp.com",
         web: "#",
         thumb:"jhjeon_portrait.jpg"

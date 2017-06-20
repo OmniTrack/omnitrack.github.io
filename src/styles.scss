@@ -42,6 +42,13 @@ $paragraph_margin_bottom: 1.5em;
     }
 }
 
+@mixin respond_to_max_width($width){
+  @media screen and (max-width: $width){
+        @content;
+    }
+}
+
+
 @mixin box-shadow($top, $left, $blur, $color, $inset: false) {
   @if $inset {
     -webkit-box-shadow:inset $top $left $blur $color;

@@ -5,7 +5,6 @@ $header_height: 60px;
 #header{
         background: white;
         height: $header_height;
-        
         @include box-shadow(0px, 1px, 6px, rgba(113, 8, 8, 0.78));
         background-color: white;
 }
