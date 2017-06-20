@@ -148,6 +148,10 @@ p, .paragraph{
     i{
         color: $color_italic;
     }
+
+    &:last-child{
+        margin-bottom: 0px;
+    }
 }
 
 .small{
@@ -184,6 +188,25 @@ a:hover, a:active{
 
 .position_relative{
     position: relative;
+}
+
+ul.horizontal_image_list{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+
+    li{
+        display: table-cell;
+        padding: 2px;
+    }
+    img{
+        display:block;
+        width: 100%;
+        height: auto;
+    }
 }
 
 @keyframes

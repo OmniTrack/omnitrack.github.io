@@ -16,10 +16,10 @@
 <p class="small">
   This website is built with <a target="_blank" href="https://angular.io">Angular 4</a>, hosted on <a target="_blank" href="https://pages.github.com/">Github Pages</a>.
 </p>
-<p class="small">
+<div class="paragraph small">
   The smartphone mockup images used in this website:
   <br>
-  <a target="_blank" href="http://www.titanui.com/49889-galaxy-s6-edge-in-hand-mockup-psd/">http://www.titanui.com/49889-galaxy-s6-edge-in-hand-mockup-psd/</a>
-  <br>
-  <a target="_blank" href="https://lstore.graphics/freebies/iphone_7/">https://lstore.graphics/freebies/iphone_7/</a>
-</p>
+  <div *ngFor="let link of mockups">
+    <a target="_blank" href="{{link}}">{{link}}</a>
+  </div>
+</div>

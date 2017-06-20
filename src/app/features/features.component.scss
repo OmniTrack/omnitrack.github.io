@@ -75,6 +75,13 @@ ul.service_list{
     }
 }
 
+.big{
+    min-width: 230px;
+    @include respond_to_mobile(){
+        min-width: inherit;
+    }
+}
+
 .service_flow{
     .message{
         position: absolute;
@@ -113,4 +120,8 @@ table.trigger_types{
     td{
         padding-left: 0.8em;
     }
+}
+
+ul.horizontal_image_list{
+    margin-top: 12px;
 }
