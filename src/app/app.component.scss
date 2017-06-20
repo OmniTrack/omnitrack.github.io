@@ -28,21 +28,18 @@ $header_height: 60px;
     }
 
     #gnb{
-        padding-top: 2px;
         font-size: 14px;
         font-weight: 600;
         color: #575757;
-        li{
+        display: flex;
+        align-items: center;
+        >*{
             display:inline-block;
             margin-left: 30px;
         }
 
-        li:first-child{
+        >*:first-child{
             margin-left: 0px;
-        }
-
-        @include respond_to_mobile(){
-            visibility: hidden;
         }
 
         a{

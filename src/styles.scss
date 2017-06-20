@@ -216,6 +216,14 @@ ul.horizontal_image_list{
     }
 }
 
+
+
+.hide_on_mobile{
+    @include respond_to_mobile(){
+        display: none !important;
+    }
+}
+
 @keyframes
 fade {  0% {
     animation-timing-function: ease-in;
