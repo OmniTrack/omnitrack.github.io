@@ -1,7 +1,7 @@
 $content_hor_padding: 16px;
 $color_accent: #d43861;
 $color_pointed: #0594c4;
-$color_italic: #e26943;
+$color_italic: inherit;
 
 $color_gradient_start: #dd4255;
 $color_gradient_end: #ef9a23;
@@ -154,6 +154,7 @@ p, .paragraph{
 
     i{
         color: $color_italic;
+        font-weight: 600;
     }
 
     &:last-child{

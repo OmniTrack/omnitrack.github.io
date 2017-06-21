@@ -47,9 +47,6 @@ $banner_layout_change_threshold: 1024px;
             
             
             @include respond_to_max_width($banner_layout_change_threshold){
-                margin-left: 0px;
-                margin-right: -50px;
-                margin-top: -20px;
                 margin-bottom: -62px;
                 left: 50%;
                 transform: translate(-50%);
