@@ -39,9 +39,9 @@ export class MembersComponent implements OnInit {
       {
         name: "Eun Kyoung Choe",
         title: "Assistant Professor",
-        affiliation: "Penn State",
-        email: "echoe (at) ist.psu.edu",
-        web:"https://faculty.ist.psu.edu/choe/",
+        affiliation: "University of Maryland",
+        email: "choe (at) umd.edu",
+        web:"https://eunkyoungchoe.com",
         thumb:"choe_portrait.png"
       },
       {

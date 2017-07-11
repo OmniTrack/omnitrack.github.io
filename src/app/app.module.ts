@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@nglibs/meta';
 
@@ -10,7 +11,8 @@ import { AboutComponent } from './about/about.component';
 import { PublicationsComponent } from './publications/publications.component';
 import { FeaturesComponent } from './features/features.component';
 import { AcknowledgementComponent } from './acknowledgement/acknowledgement.component';
-
+import { HomeComponent } from './home/home.component';
+import { Imwut2017augComponent } from './imwut2017aug/imwut2017aug.component';
 
 export function metaFactory(): MetaLoader{
   return new MetaStaticLoader({
@@ -28,6 +30,21 @@ export function metaFactory(): MetaLoader{
     });
 }
 
+const appRoutes: Routes = [
+  {
+    path: 'home',
+    component: HomeComponent
+  },
+  { path: '',
+    redirectTo: "/home",
+    pathMatch: 'full'
+  },
+  {
+    path:'publications/imwut2017aug',
+    component: Imwut2017augComponent,
+    data: {mainBannerMode: "hidden"}
+  }
+]
 
 @NgModule({
   declarations: [
@@ -37,14 +54,22 @@ export function metaFactory(): MetaLoader{
     AboutComponent,
     PublicationsComponent,
     FeaturesComponent,
-    AcknowledgementComponent
+    AcknowledgementComponent,
+    HomeComponent,
+    Imwut2017augComponent
   ],
   imports: [
     BrowserModule,
     MetaModule.forRoot({
       provide: MetaLoader,
       useFactory: (metaFactory)
-    })
+    }),
+    RouterModule.forRoot(
+      appRoutes,
+      {
+        enableTracing: true
+      }
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
