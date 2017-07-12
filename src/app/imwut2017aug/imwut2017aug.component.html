@@ -1,21 +1,29 @@
 
 <div id="main" class="center_content content_padded">
+  <h1>Publication Info</h1>
+  <div class="paragraph">
+    Young-Ho Kim, Jae Ho Jeon, Bongshin Lee, Eun Kyoung Choe, and Jinwook Seo. 2017. <br>
+    <b>OmniTrack: A Flexible Self-Tracking Approach Leveraging Semi-Automated Tracking.</b><br> 
+    <i>PACM on Interactive, Mobile, Wearable and Ubiquitous Technologies</i>. 1, 3. Accepted for Publication.
+  </div>
+  
+  
   <h1>Supplementary Material</h1>
-  <h4>
+  <h2>
     Use Case Scenarios Demonstration Video
-  </h4>
-  
-  <h4>
-    Preliminary App Analysis Data
-  </h4>
-  
-  <h4>
-    Usability Study Task Scenarios and Requirements
-  </h4>
-  
-  <h4>
-    Deployment Study Result Data
-  </h4>
+  </h2>
 
-  <app-members></app-members>
+  <h2>Dataset</h2>
+  <table>
+    <tr *ngFor="let data of dataset">
+      <th>{{data.name}}</th>
+      <td>
+        <span class="link" *ngFor="let linkElement of data.links">
+          <a [href]="linkElement.link">{{linkElement.name}}</a>
+        </span>
+      </td>
+    </tr>
+  </table>
+
+  <app-members [title]="'Authors'"></app-members>
 </div>

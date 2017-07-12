@@ -31,12 +31,8 @@ export function metaFactory(): MetaLoader{
 }
 
 const appRoutes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
   { path: '',
-    redirectTo: "/home",
+    redirectTo: "/publications/imwut2017aug",
     pathMatch: 'full'
   },
   {
