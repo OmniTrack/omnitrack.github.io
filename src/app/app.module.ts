@@ -32,11 +32,11 @@ export function metaFactory(): MetaLoader{
 
 const appRoutes: Routes = [
   { path: '',
-    redirectTo: "/publications/imwut2017aug",
+    redirectTo: "/ubicomp2017",
     pathMatch: 'full'
   },
   {
-    path:'publications/imwut2017aug',
+    path:'ubicomp2017',
     component: Imwut2017augComponent,
     data: {mainBannerMode: "hidden"}
   }
