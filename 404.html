@@ -14,6 +14,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=0.8">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-103035977-1', 'auto');
+    ga('send', 'pageview');
+
+    var trackOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+    }
+
+  </script>
 <link href="styles.8d2e8c261093a710b358.bundle.css" rel="stylesheet"/></head>
 <body>
   <div id="fb-root"></div>
@@ -25,5 +42,5 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
   <app-root></app-root>
-<script type="text/javascript" src="inline.480d80c71b9c067500a4.bundle.js"></script><script type="text/javascript" src="polyfills.07685bca73161be59257.bundle.js"></script><script type="text/javascript" src="vendor.9357eece2e5ebb6d3d80.bundle.js"></script><script type="text/javascript" src="main.9c50083d10e692cdd278.bundle.js"></script></body>
+<script type="text/javascript" src="inline.1fc567a4b2b0e1367c3b.bundle.js"></script><script type="text/javascript" src="polyfills.07685bca73161be59257.bundle.js"></script><script type="text/javascript" src="vendor.b6b27af1329b9840afca.bundle.js"></script><script type="text/javascript" src="main.262b63dedeef0df5d52b.bundle.js"></script></body>
 </html>
