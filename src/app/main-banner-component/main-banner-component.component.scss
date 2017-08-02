@@ -12,7 +12,7 @@ $banner_layout_change_threshold: 1024px;
     position: relative;
 
     
-    height: 520px;
+    height: 429px;
 
     @include respond_to_max_width($banner_layout_change_threshold){
         height: inherit;
@@ -27,7 +27,7 @@ $banner_layout_change_threshold: 1024px;
         position: absolute;
         
             z-index: 0;
-            bottom: -12px;
+            bottom: -55px;
             right: -60px;
 
         

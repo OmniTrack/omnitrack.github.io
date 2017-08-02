@@ -23,3 +23,30 @@
     </a>
   </div>
 </div>
+
+<div *ngIf="alumni">
+<h3>Past Members</h3>
+<div class="members">
+  <div class="member" *ngFor="let member of alumni">    
+    <a href="{{member.web}}" target=_blank>
+      <div class="member_content">
+      <div class="thumb">
+          <img src="assets/images/{{member.thumb}}">
+      </div>
+      <div class="information">
+        <div class="name">
+          {{member.name}}
+        </div>
+        <div class="description">
+          {{member.title}}<br>
+          {{member.affiliation}}<br>
+          <span class="email">
+          {{member.email}}
+          </span>
+        </div>
+        </div>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>

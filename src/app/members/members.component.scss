@@ -17,6 +17,7 @@ div.members{
 
     div.member{
         width: 240px;
+        flex-basis: 25%;
         border-radius: 12px;
         @include respond_to_mobile(){
             width: inherit;
@@ -31,7 +32,6 @@ div.members{
 
         .member_content{
             width: 100%;
-            padding: 5px;
             font-size: 11pt;
             display:inline-block;
             text-align: center;
@@ -43,7 +43,7 @@ div.members{
             }
 
             .thumb{
-
+                padding: 5px;
                 pointer-events: none;
                 width: 75%;
                 margin: 0px auto;
@@ -62,7 +62,7 @@ div.members{
             }
             
             .information{
-
+                padding: 0px 5px 5px 5px;
                 pointer-events: none;
                 @include respond_to_mobile(){
                     flex: 1;

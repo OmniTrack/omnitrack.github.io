@@ -32,9 +32,9 @@ export function metaFactory(): MetaLoader{
 
 const appRoutes: Routes = [
   { path: '',
-    //component: HomeComponent
-    redirectTo: '/ubicomp2017',
-    pathMatch: 'full'
+    component: HomeComponent
+    //redirectTo: '/ubicomp2017',
+    //pathMatch: 'full'
   },
   {
     path:'ubicomp2017',

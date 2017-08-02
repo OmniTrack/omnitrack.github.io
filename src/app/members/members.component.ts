@@ -9,11 +9,7 @@ export class MembersComponent implements OnInit {
 
   @Input() title = "The OmniTrack Team"
 
-  members: Array<any>
-
-  constructor() {
-
-    this.members = [
+  @Input() members = [
       {
         name: "Young-Ho Kim",
         title: "Ph.D Candidate",
@@ -55,6 +51,10 @@ export class MembersComponent implements OnInit {
         thumb:"jseo_portrait.jpg"
       }
     ]
+
+    @Input() alumni
+
+  constructor() {
   }
 
   ngOnInit() {

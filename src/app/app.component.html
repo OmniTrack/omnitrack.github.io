@@ -1,6 +1,8 @@
 <div id="header">
   <div class="center_content" id="header_content">
-    <img class="logo" src="assets/images/omnitrack_new_logo.svg">
+    <a routerLink="/" routerLinkActive="active">
+      <img class="logo" src="assets/images/omnitrack_new_logo.svg">
+    </a>
     
     
     <div id="gnb">
@@ -17,8 +19,9 @@
     </div>
   </div>
 </div>
-
-<router-outlet></router-outlet>
+<div id="main">
+  <router-outlet></router-outlet>
+</div>
 
 <div id="footer">
   <div id="footer_content">
