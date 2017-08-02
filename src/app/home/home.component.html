@@ -1,8 +1,21 @@
-<app-main-banner-component></app-main-banner-component>
-<div class="center_content content_padded">
-  <app-about></app-about>
-  <app-features></app-features>
-  <app-publications></app-publications>
-  <app-members [members] = "members" [alumni] = "alumni"></app-members>
-  <app-acknowledgement></app-acknowledgement>
+<app-header-bar [elements] = "navElements"></app-header-bar>
+<div id="main">
+  <app-main-banner-component></app-main-banner-component>
+  <div class="center_content content_padded">
+    
+    <a class="anchor lowpadding" [id]="id_about"></a>
+    <app-about></app-about>
+
+    <a class="anchor" [id]="id_features"></a>
+    <app-features></app-features>
+    
+    <a class="anchor" [id]="id_publications"></a>
+    <app-publications></app-publications>
+    
+    <a class="anchor" [id]="id_team"></a>
+    <app-members [members] = "members" [alumni] = "alumni"></app-members>
+    
+    <a class="anchor" [id]="id_ack"></a>
+    <app-acknowledgement></app-acknowledgement>
+  </div>
 </div>

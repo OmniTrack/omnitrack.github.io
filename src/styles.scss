@@ -8,6 +8,8 @@ $color_gradient_end: #ef9a23;
 
 $paragraph_margin_bottom: 1.5em;
 
+$header_height: 60px;
+$header_mobile_gnb_height: 45px;
 
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
   /* fallback/image non-cover color */
@@ -84,6 +86,39 @@ body{
     background: #fafafa;
     padding: 0px;
     margin: 0px;
+}
+
+
+#main{
+    padding-top: $header_height;
+
+    @include respond_to_mobile(){
+        padding-top: $header_height + $header_mobile_gnb_height;
+    }
+}
+
+a.anchor{
+    padding-top:10px;
+    margin-top: -10px;
+    position: relative;
+    display: block;
+    visibility: hidden;
+
+    @include respond_to_mobile(){
+        padding-top: 10px + $header_mobile_gnb_height;
+        margin-top: -(10px + $header_mobile_gnb_height);
+           
+    }
+
+    &.lowpadding{
+        padding-top:40px;
+        margin-top: -40px;
+
+        @include respond_to_mobile(){
+            padding-top: 40px + $header_mobile_gnb_height;
+            margin-top: -(40px + $header_mobile_gnb_height);   
+        }
+    }
 }
 
 .center_content{
@@ -233,6 +268,13 @@ ul.horizontal_image_list{
 .hide_on_mobile{
     @include respond_to_mobile(){
         display: none !important;
+    }
+}
+
+.show_on_mobile_flex{
+    display: none !important;
+    @include respond_to_mobile(){
+        display: flex !important;
     }
 }
 

@@ -1,5 +1,6 @@
-
+<app-header-bar [elements] = "navElements"></app-header-bar>
 <div id="main" class="center_content content_padded">
+  <a class="anchor" id="section_info"></a>
   <h1>Publication Info</h1>
   <div class="paragraph">
     Young-Ho Kim, Jae Ho Jeon, Bongshin Lee, Eun Kyoung Choe, and Jinwook Seo. 2017. <br>
@@ -8,7 +9,15 @@
     <br>
     <a href="/assets/files/IMWUT-2017-Kim-OmniTrack.pdf" onclick="trackOutboundLink('/assets/files/IMWUT-2017-Kim-OmniTrack.pdf')">Download PDF</a>
   </div>
+ 
+  <a class="anchor" id="section_abstract"></a>
+  <h1>Abstract</h1>
+  <p>
+    We now see an increasing number of self-tracking apps and wearable devices. Despite the vast number of available tools, however, it is still challenging for self-trackers to find apps that suit their unique tracking needs, preferences, and commitments. Furthermore, people are bounded by the tracking tools’ initial design because it is difficult to modify, extend, or mash up existing tools. In this paper, we present OmniTrack, a mobile self-tracking system, which enables self-trackers to construct their own trackers and customize tracking items to meet their individual tracking needs. To inform the OmniTrack design, we first conducted semi-structured interviews (N = 12) and analyzed existing mobile tracking apps (N = 62). We then designed and developed OmniTrack as an Android mobile app, leveraging a semi-automated tracking approach that combines manual and automated tracking methods. We evaluated OmniTrack through a usability study (N = 10) and improved its interfaces based on the feedback. Finally, we conducted a 3-week deployment study (N = 21) to assess if people can capitalize on OmniTrack’s flexible and customizable design to meet their tracking needs. From the study, we showed how participants used OmniTrack to create, revise, and appropriate trackers—ranging from a simple mood tracker to a sophisticated daily activity tracker. We discuss how OmniTrack positively influences and supports self-trackers’ tracking practices over time, and how to further improve OmniTrack by providing more appropriate visualizations and sharable templates, incorporating external contexts, and supporting researchers’ unique data collection needs.
+  </p>
   
+
+  <a class="anchor" id="section_supplementary"></a>
   <h1>Supplementary Material</h1>
   <h2>
     Use Case Scenarios Demonstration Video
@@ -29,5 +38,6 @@
     </tr>
   </table>
 
+  <a class="anchor" id="section_authors"></a>
   <app-members [title]="'Authors'"></app-members>
 </div>

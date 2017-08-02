@@ -8,6 +8,25 @@ import {MembersComponent} from "../members/members.component";
 })
 export class Imwut2017augComponent implements OnInit {
 
+  navElements = [
+    {
+      text: "Info",
+      link: "/ubicomp2017#section_info"
+    },
+    {
+      text: "Abstract",
+      link: "/ubicomp2017#section_abstract"
+    },
+    {
+      text: "Supplemental",
+      link: "/ubicomp2017#section_supplementary"
+    },
+    {
+      text: "Authors",
+      link: "/ubicomp2017#section_authors"
+    },
+  ]
+
   dataset = [
     {
       name: "Preliminary App Market Analysis Result",

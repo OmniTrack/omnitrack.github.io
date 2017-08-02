@@ -13,6 +13,7 @@ import { FeaturesComponent } from './features/features.component';
 import { AcknowledgementComponent } from './acknowledgement/acknowledgement.component';
 import { HomeComponent } from './home/home.component';
 import { Imwut2017augComponent } from './imwut2017aug/imwut2017aug.component';
+import { HeaderBarComponent } from './header-bar/header-bar.component';
 
 export function metaFactory(): MetaLoader{
   return new MetaStaticLoader({
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     FeaturesComponent,
     AcknowledgementComponent,
     HomeComponent,
-    Imwut2017augComponent
+    Imwut2017augComponent,
+    HeaderBarComponent
   ],
   imports: [
     BrowserModule,

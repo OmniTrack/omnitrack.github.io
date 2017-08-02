@@ -1,66 +1,5 @@
 @import "../styles.scss";
 
-$header_height: 60px;
-
-#header{
-        height: $header_height;
-        @include box-shadow(0px, 1px, 6px, rgba(70, 61, 61, 0.29));
-       
-        position: fixed;
-        background: rgba(255,255,255,0.9);
-        z-index: 1000;
-        width: 100%;
-        top: 0;
-        left: 0;
-}
-
-#header_content{
-    height: $header_height;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px $content_hor_padding;
-    position: relative;
-
-
-    .logo{
-        width: 160px;
-        margin-left: -6px;
-    }
-
-    #gnb{
-        font-size: 10.5pt;
-        font-weight: 700;
-        color: #575757;
-        display: flex;
-        align-items: center;
-        >*{
-            display:inline-block;
-            margin-left: 30px;
-        }
-
-        >*:first-child{
-            margin-left: 0px;
-        }
-
-        a{
-            text-decoration: none;
-        }
-
-        a:link{
-            color: inherit;
-        }
-
-        a:visited{
-            color: inherit;
-        }
-
-        a:hover{
-            color: $color_accent;
-        }
-    }
-}
-
 #footer{
     margin-top: 40px;
     padding-top: 12px;
@@ -72,8 +11,4 @@ $header_height: 60px;
         color: white;
         font-size: 10pt;
     }
-}
-
-#main{
-    padding-top: $header_height;
 }
