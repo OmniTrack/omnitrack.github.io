@@ -90,12 +90,24 @@ img.visualization_dashboard{
 }
 
 .service_flow{
+
+    ol{
+        padding: 0px;
+        margin: 0px;
+        padding-left: 1.3em;
+
+        li::marker{
+            font-size: 2em;
+        }
+    }
+
     .message{
         position: absolute;
         width: 18%;
+        min-width: 25%;
         bottom: 0px;
         background: rgba(5, 148, 196, 0.78);
-        line-height: 1.8em;
+        line-height: 1.4em;
         color: white;
         padding: 0.5em 0.8em;
         margin-bottom: 1.5em;

@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
 import {MemberProfileService} from '../member-profile.service';
+import {SharedService} from '../shared.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
-  providers: [MemberProfileService]
+  styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterContentInit {
 
   members: Array<any>
   alumni: Array<any>
@@ -40,11 +40,16 @@ export class HomeComponent implements OnInit {
     }
   ]
 
-  constructor(private memberProfile: MemberProfileService) { }
+  constructor(private shared: SharedService, private memberProfile: MemberProfileService) { }
 
   ngOnInit() {
     this.members = [this.memberProfile.yhkim, this.memberProfile.blee, this.memberProfile.echoe, this.memberProfile.jseo]
     this.alumni = [this.memberProfile.jhjeon]
+    
+  }
+
+  ngAfterContentInit(){
+    this.shared.setGnbElements(this.navElements)
   }
 
 }

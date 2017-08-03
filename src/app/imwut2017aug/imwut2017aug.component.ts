@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MembersComponent} from "../members/members.component";
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-imwut2017aug',
@@ -44,9 +45,10 @@ export class Imwut2017augComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor(private shared: SharedService) { }
 
   ngOnInit() {
+    this.shared.setGnbElements(this.navElements)
   }
 
 }

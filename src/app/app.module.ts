@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@nglibs/meta';
 
+import {MemberProfileService} from "./member-profile.service";
+import { SharedService } from "./shared.service";
+
 import { AppComponent } from './app.component';
 import { MainBannerComponentComponent } from './main-banner-component/main-banner-component.component';
 import { MembersComponent } from './members/members.component';
@@ -70,7 +73,7 @@ const appRoutes: Routes = [
       }
     )
   ],
-  providers: [],
+  providers: [SharedService, MemberProfileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
