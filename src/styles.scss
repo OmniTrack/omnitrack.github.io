@@ -11,6 +11,8 @@ $paragraph_margin_bottom: 1.5em;
 $header_height: 60px;
 $header_mobile_gnb_height: 45px;
 
+$desktop_content_width: 1024px;
+
 @mixin horizontal-gradient($from, $to, $stop: 100%) {
   /* fallback/image non-cover color */
   background-color: $from;
@@ -40,6 +42,12 @@ $header_mobile_gnb_height: 45px;
 
 @mixin respond_to_mobile(){
   @media screen and (max-width: 720px){
+        @content;
+    }
+}
+
+@mixin respond_to_smaller_than_desktop(){
+    @media screen and (max-width: $desktop_content_width){
         @content;
     }
 }
@@ -92,7 +100,7 @@ body{
 #main{
     padding-top: $header_height;
 
-    @include respond_to_mobile(){
+    @include respond_to_smaller_than_desktop(){
         padding-top: $header_height + $header_mobile_gnb_height;
     }
 }
@@ -122,7 +130,7 @@ a.anchor{
 }
 
 .center_content{
-    max-width: 1024px;
+    max-width: $desktop_content_width;
     margin-left: auto;
     margin-right: auto;
 }
@@ -271,6 +279,19 @@ ul.horizontal_image_list{
     }
 }
 
+.hide_smaller_than_desktop{
+    @include respond_to_smaller_than_desktop(){
+        display: none !important;
+    }
+}
+
+.show_smaller_than_desktop_flex{
+    display: none !important;
+    @include respond_to_smaller_than_desktop(){
+        display: flex !important;
+    }
+}
+
 .show_on_mobile_flex{
     display: none !important;
     @include respond_to_mobile(){
@@ -296,4 +317,8 @@ fade {  0% {
     100% {
     opacity: 0;
     }
+}
+
+.twitter-tweet-button{
+    margin-left: 3px;
 }

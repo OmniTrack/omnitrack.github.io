@@ -6,14 +6,15 @@
     
     
     <div id="gnb">
-      <a class="hide_on_mobile" *ngFor="let element of elements" [href]="element.link" routerLinkActive="active">
+      <a class="hide_smaller_than_desktop" *ngFor="let element of elements" [href]="element.link" routerLinkActive="active">
         {{element.text}}
       </a>
       <div class="fb-like" data-href="https://omnitrack.github.io" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
+      <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Create customized trackers and pull data from fitness trackers.&via=omnitrack_app&url=https%3A%2F%2Fomnitrack.github.io&hashtags=quantifiedself,selftracking" data-size="large"></a>
     </div>
   </div>
 
-  <div id="gnb_mobile" class="show_on_mobile_flex">
+  <div id="gnb_mobile" class="show_smaller_than_desktop_flex">
      <a *ngFor="let element of elements" [href]="element.link" routerLinkActive="active">
         {{element.text}}
       </a>
