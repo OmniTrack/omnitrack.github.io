@@ -25,7 +25,7 @@ export function metaFactory(): MetaLoader{
       applicationName: 'OmniTrack',
       defaults: {
         title: 'OmniTrack: a Flexible Self-tracking Platform',
-        description: 'Keep track of omnithing in your life',
+        description: 'Track what\'s important for you.',
         'og:image': 'https://upload.wikimedia.org/wikipedia/commons/f/f8/superraton.jpg',
         'og:type': 'website',
         'og:locale': 'en_US',
@@ -69,7 +69,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       {
-        enableTracing: true
+        enableTracing: true,
+        useHash: false
       }
     )
   ],

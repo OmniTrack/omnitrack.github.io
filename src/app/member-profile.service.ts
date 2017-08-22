@@ -35,7 +35,7 @@ export class MemberProfileService {
     title: "Assistant Professor",
     affiliation: "University of Maryland",
     email: "choe (at) umd.edu",
-    web:"https://eunkyoungchoe.com",
+    web:"http://eunkyoungchoe.com",
     thumb:"choe_portrait.png"
   }
 

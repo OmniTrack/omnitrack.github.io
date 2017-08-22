@@ -112,7 +112,7 @@ a.anchor{
     display: block;
     visibility: hidden;
 
-    @include respond_to_mobile(){
+    @include respond_to_smaller_than_desktop(){
         padding-top: 10px + $header_mobile_gnb_height;
         margin-top: -(10px + $header_mobile_gnb_height);
            
@@ -122,7 +122,7 @@ a.anchor{
         padding-top:40px;
         margin-top: -40px;
 
-        @include respond_to_mobile(){
+        @include respond_to_smaller_than_desktop(){
             padding-top: 40px + $header_mobile_gnb_height;
             margin-top: -(40px + $header_mobile_gnb_height);   
         }
