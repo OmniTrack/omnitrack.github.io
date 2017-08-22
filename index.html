@@ -31,16 +31,38 @@
     }
 
   </script>
-<link href="styles.8d2e8c261093a710b358.bundle.css" rel="stylesheet"/></head>
+<link href="styles.8d73d7159a84eea89522.bundle.css" rel="stylesheet"/></head>
 <body>
   <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+  <script>
+    //facebook
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    //twitter
+    window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
+
+  </script>
   <app-root></app-root>
-<script type="text/javascript" src="inline.1fc567a4b2b0e1367c3b.bundle.js"></script><script type="text/javascript" src="polyfills.07685bca73161be59257.bundle.js"></script><script type="text/javascript" src="vendor.b6b27af1329b9840afca.bundle.js"></script><script type="text/javascript" src="main.262b63dedeef0df5d52b.bundle.js"></script></body>
+<script type="text/javascript" src="inline.a059cfba07f8fa65fddb.bundle.js"></script><script type="text/javascript" src="polyfills.07685bca73161be59257.bundle.js"></script><script type="text/javascript" src="vendor.cff0a8a88d7ad53d0d38.bundle.js"></script><script type="text/javascript" src="main.d86b8d98a305a33047dc.bundle.js"></script></body>
 </html>
