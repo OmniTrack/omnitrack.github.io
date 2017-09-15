@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
   id_about = "section_about"
   id_team = "section_team"
   id_ack = "section_ack"
+  id_news = "section_news"
   id_publications = "section_publications"
 
   navElements = [
