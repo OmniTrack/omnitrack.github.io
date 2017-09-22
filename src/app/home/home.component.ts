@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
 
   members: Array<any>
   alumni: Array<any>
+  contributors: Array<any>
 
   id_features = "section_features"
   id_about = "section_about"
@@ -44,9 +45,9 @@ export class HomeComponent implements OnInit, AfterContentInit {
   constructor(private shared: SharedService, private memberProfile: MemberProfileService) { }
 
   ngOnInit() {
-    this.members = [this.memberProfile.yhkim, this.memberProfile.blee, this.memberProfile.echoe, this.memberProfile.jseo]
-    this.alumni = [this.memberProfile.jhjeon]
-    
+    this.members = this.memberProfile.members()
+    this.alumni = this.memberProfile.pastMembers()
+    this.contributors = this.memberProfile.contributors()
   }
 
   ngAfterContentInit(){

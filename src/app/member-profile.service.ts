@@ -48,8 +48,32 @@ export class MemberProfileService {
     thumb:"jseo_portrait.jpg"
   }
 
+  readonly jhkim = {
+    name: "Junhoe Kim",
+    title: "Undergraduate Student",
+    email: "jooon.hoe94 (at) gmail.com",
+    affiliation: "Seoul Nat'l University",
+    thumb: "jhkim_portrait.jpg"
+  }
+
   constructor() {
 
-   }
+  }
+
+  public ubicomp2017Authors(): Array<any>{
+    return [this.yhkim, this.jhjeon, this.blee, this.echoe, this.jseo]
+  }
+
+  public pastMembers(): Array<any>{
+    return [this.jhjeon]
+  }
+
+  public members(): Array<any>{
+    return [this.yhkim, this.blee, this.echoe, this.jseo]
+  }
+
+  public contributors(): Array<any>{
+    return [this.jhkim]
+  }
 
 }

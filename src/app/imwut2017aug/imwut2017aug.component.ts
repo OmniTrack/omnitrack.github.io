@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MembersComponent} from "../members/members.component";
+import {MemberProfileService} from '../member-profile.service';
 import { SharedService } from '../shared.service';
 
 @Component({
@@ -45,7 +46,7 @@ export class Imwut2017augComponent implements OnInit {
     }
   ]
 
-  constructor(private shared: SharedService) { }
+  constructor(private shared: SharedService, private memberProfile: MemberProfileService) { }
 
   ngOnInit() {
     this.shared.setGnbElements(this.navElements)
