@@ -46,7 +46,7 @@ export class Imwut2017augComponent implements OnInit {
     }
   ]
 
-  constructor(private shared: SharedService, private memberProfile: MemberProfileService) { }
+  constructor(private shared: SharedService, public memberProfile: MemberProfileService) { }
 
   ngOnInit() {
     this.shared.setGnbElements(this.navElements)
