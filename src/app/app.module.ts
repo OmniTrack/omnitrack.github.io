@@ -43,6 +43,10 @@ const appRoutes: Routes = [
     component: AppComponent,
     children: [
       { path: '',
+      redirectTo: '/main',
+      pathMatch: 'full'
+      },
+      { path: 'main',
         component: HomeComponent
         //redirectTo: '/ubicomp2017',
         //pathMatch: 'full'
@@ -56,8 +60,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'recruit',
-    component: RecruitComponent,
-    data: {hideTopBar: true}
+    component: RecruitComponent
   }
 ]
 
