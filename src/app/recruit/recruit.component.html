@@ -1,0 +1,19 @@
+<div class="panel-container">
+<div class="mobile hide_higher_than_mobile">
+  <div *ngFor="let img of mobile">
+    <img [src]="'assets/images/recruit/mobile/' + img">
+  </div>
+</div>
+<div class="desktop hide_on_mobile">
+  <div *ngFor="let img of desktop">
+    <img [src]="'assets/images/recruit/desktop/' + img">
+  </div>
+</div>
+</div>
+
+<div class="center">
+  <a href="https://goo.gl/forms/o7OJZwWX4XngbR2O2">
+    <span class="button">
+    참가 신청하러 가기 (Google Form)</span>
+  </a>
+</div>

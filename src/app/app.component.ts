@@ -3,7 +3,7 @@ import { Router, NavigationEnd } from '@angular/router';
 import { SharedService } from "./shared.service";
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-main',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

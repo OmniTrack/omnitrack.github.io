@@ -18,6 +18,8 @@ import { HomeComponent } from './home/home.component';
 import { Imwut2017augComponent } from './imwut2017aug/imwut2017aug.component';
 import { HeaderBarComponent } from './header-bar/header-bar.component';
 import { NewsComponent } from './news/news.component';
+import { RecruitComponent } from './recruit/recruit.component';
+import { GlobalComponent } from './global/global.component';
 
 export function metaFactory(): MetaLoader{
   return new MetaStaticLoader({
@@ -36,20 +38,32 @@ export function metaFactory(): MetaLoader{
 }
 
 const appRoutes: Routes = [
-  { path: '',
-    component: HomeComponent
-    //redirectTo: '/ubicomp2017',
-    //pathMatch: 'full'
+  {
+    path: '',
+    component: AppComponent,
+    children: [
+      { path: '',
+        component: HomeComponent
+        //redirectTo: '/ubicomp2017',
+        //pathMatch: 'full'
+      },
+      {
+        path:'ubicomp2017',
+        component: Imwut2017augComponent,
+        data: {mainBannerMode: "hidden"}
+      }
+    ]
   },
   {
-    path:'ubicomp2017',
-    component: Imwut2017augComponent,
-    data: {mainBannerMode: "hidden"}
+    path: 'recruit',
+    component: RecruitComponent,
+    data: {hideTopBar: true}
   }
 ]
 
 @NgModule({
   declarations: [
+    GlobalComponent,
     AppComponent,
     MainBannerComponentComponent,
     MembersComponent,
@@ -60,7 +74,8 @@ const appRoutes: Routes = [
     HomeComponent,
     Imwut2017augComponent,
     HeaderBarComponent,
-    NewsComponent
+    NewsComponent,
+    RecruitComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +92,6 @@ const appRoutes: Routes = [
     )
   ],
   providers: [SharedService, MemberProfileService],
-  bootstrap: [AppComponent]
+  bootstrap: [GlobalComponent]
 })
 export class AppModule { }

@@ -46,6 +46,12 @@ $desktop_content_width: 1024px;
     }
 }
 
+@mixin respond_to_higher_than_mobile(){
+  @media screen and (min-width: 720px){
+    @content;
+  }
+}
+
 @mixin respond_to_smaller_than_desktop(){
     @media screen and (max-width: $desktop_content_width){
         @content;
@@ -274,9 +280,15 @@ ul.horizontal_image_list{
 
 
 .hide_on_mobile{
-    @include respond_to_mobile(){
-        display: none !important;
-    }
+  @include respond_to_mobile(){
+    display: none !important;
+  }
+}
+
+.hide_higher_than_mobile{
+  @include respond_to_higher_than_mobile(){
+    display: none !important;
+  }
 }
 
 .hide_smaller_than_desktop{
