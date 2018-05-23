@@ -24,10 +24,10 @@
   </div>
 </div>
 
-<div *ngIf="alumni">
-  <h3>Past Members</h3>
+<div *ngIf="contributors">
+  <h3>Contributors</h3>
   <div class="members">
-    <div class="member" *ngFor="let member of alumni">    
+    <div class="member" *ngFor="let member of contributors">    
       <a href="{{member.web}}" target=_blank>
         <div class="member_content">
         <div class="thumb">
@@ -51,10 +51,10 @@
   </div>
 </div>
 
-<div *ngIf="contributors">
-  <h3>Contributors</h3>
+<div *ngIf="alumni">
+  <h3>Past Members</h3>
   <div class="members">
-    <div class="member" *ngFor="let member of contributors">    
+    <div class="member" *ngFor="let member of alumni">    
       <a href="{{member.web}}" target=_blank>
         <div class="member_content">
         <div class="thumb">

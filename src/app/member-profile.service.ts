@@ -41,7 +41,7 @@ export class MemberProfileService {
 
   readonly jseo = {
     name: "Jinwook Seo",
-    title: "Associate Professor",
+    title: "Professor",
     affiliation: "Seoul Nat'l University",
     email: "jseo (at) snu.ac.kr",
     web:"http://hcil.snu.ac.kr/people/jinwook-seo",
@@ -51,9 +51,17 @@ export class MemberProfileService {
   readonly jhkim = {
     name: "Junhoe Kim",
     title: "Undergraduate Student",
-    email: "jooon.hoe94 (at) gmail.com",
+    email: "jhkim (at) hcil.snu.ac.kr",
     affiliation: "Seoul Nat'l University",
     thumb: "jhkim_portrait.jpg"
+  }
+
+  readonly valerie = {
+    name: "Valérie Erb",
+    title: "Undergraduate Student",
+    email: "valerieerb (at) gmail.com",
+    affiliation: "Universität Zürich",
+    thumb: "valerie_portrait.jpg"
   }
 
   constructor() {
@@ -73,7 +81,7 @@ export class MemberProfileService {
   }
 
   public contributors(): Array<any>{
-    return [this.jhkim]
+    return [this.jhkim, this.valerie]
   }
 
 }
