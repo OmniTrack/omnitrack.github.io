@@ -1,73 +1,78 @@
 @import '../../styles.scss';
 
-#header{
-        @include box-shadow(0px, 1px, 6px, rgba(70, 61, 61, 0.29));
-       
-        position: fixed;
-        background: rgba(255,255,255,0.9);
-        z-index: 1000;
-        width: 100%;
-        top: 0;
-        left: 0;
+#header {
+  @include box-shadow(0px, 1px, 6px, rgba(70, 61, 61, 0.29));
 
-        
-}
-
-#header_content{
-    height: $header_height;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px $content_hor_padding;
-    position: relative;
-
-
-    .logo{
-        width: 160px;
-        margin-left: -6px;
-        margin-top: 6px;
-    }
+  position: fixed;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 0;
 
 
 }
-#gnb, #gnb_mobile{
-        font-size: 10.5pt;
-        font-weight: 700;
-        color: #575757;
-        display: flex;
-        align-items: center;
-        >*{
-            display:inline-block;
-            margin-left: 25px;
-        }
 
-        >*:first-child{
-            margin-left: 0px;
-        }
+#header_content {
+  height: $header_height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px $content_hor_padding;
+  position: relative;
 
-        a{
-            text-decoration: none;
-        }
 
-        a:link{
-            color: inherit;
-        }
+  .logo {
+    width: 160px;
+    margin-left: -6px;
+    margin-top: 6px;
+  }
 
-        a:visited{
-            color: inherit;
-        }
 
-        a:hover{
-            color: $color_accent;
-        }
 }
 
-#gnb_mobile{
-    border-top: 1px solid #d6d6d6;
-    height: $header_mobile_gnb_height;
-    font-size: 11pt;
-    justify-content: space-around;
-    >*{
-        margin:0px;
-    }
+#gnb,
+#gnb_mobile {
+  font-size: 10.5pt;
+  font-weight: 700;
+  color: #575757;
+  display: flex;
+  align-items: center;
+
+  >* {
+    display: inline-block;
+    margin-left: 25px;
+  }
+
+  >*:first-child {
+    margin-left: 0px;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:link {
+    color: inherit;
+  }
+
+  a:visited {
+    color: inherit;
+  }
+
+  a:hover {
+    color: $color_accent;
+  }
+}
+
+#gnb_mobile {
+  border-top: 1px solid #d6d6d6;
+  height: $header_mobile_gnb_height;
+  font-size: 11pt;
+  justify-content: space-around;
+
+  >* {
+    margin: 0px;
+  }
 }

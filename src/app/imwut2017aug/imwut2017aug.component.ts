@@ -13,19 +13,19 @@ export class Imwut2017augComponent implements OnInit {
   navElements = [
     {
       text: "Info",
-      link: "/ubicomp2017#section_info"
+      link: "section_info"
     },
     {
       text: "Abstract",
-      link: "/ubicomp2017#section_abstract"
+      link: "section_abstract"
     },
     {
       text: "Supplemental",
-      link: "/ubicomp2017#section_supplementary"
+      link: "section_supplementary"
     },
     {
       text: "Authors",
-      link: "/ubicomp2017#section_authors"
+      link: "section_authors"
     },
   ]
 
@@ -49,7 +49,7 @@ export class Imwut2017augComponent implements OnInit {
   constructor(private shared: SharedService, public memberProfile: MemberProfileService) { }
 
   ngOnInit() {
-    this.shared.setGnbElements(this.navElements)
+    this.shared.setGnbElements(this.navElements, ['./ubicomp2017'])
   }
 
 }

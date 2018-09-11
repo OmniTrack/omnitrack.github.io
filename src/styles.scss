@@ -213,6 +213,10 @@ p, .paragraph{
     &:last-child{
         margin-bottom: 0px;
     }
+
+    img{
+      max-width: 100%;
+    }
 }
 
 .small{

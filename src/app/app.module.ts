@@ -1,26 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import { MetaModule, MetaLoader, MetaStaticLoader, PageTitlePositioning } from '@nglibs/meta';
-
-import {MemberProfileService} from "./member-profile.service";
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
+import { MemberProfileService } from "./member-profile.service";
 import { SharedService } from "./shared.service";
 
-import { AppComponent } from './app.component';
-import { MainBannerComponentComponent } from './main-banner-component/main-banner-component.component';
-import { MembersComponent } from './members/members.component';
-import { AboutComponent } from './about/about.component';
-import { PublicationsComponent } from './publications/publications.component';
-import { FeaturesComponent } from './features/features.component';
-import { AcknowledgementComponent } from './acknowledgement/acknowledgement.component';
-import { HomeComponent } from './home/home.component';
-import { Imwut2017augComponent } from './imwut2017aug/imwut2017aug.component';
-import { HeaderBarComponent } from './header-bar/header-bar.component';
-import { NewsComponent } from './news/news.component';
-import { RecruitComponent } from './recruit/recruit.component';
-import { GlobalComponent } from './global/global.component';
+import { AppComponent } from "./app.component";
+import { MainBannerComponentComponent } from "./main-banner-component/main-banner-component.component";
+import { MembersComponent } from "./members/members.component";
+import { AboutComponent } from "./about/about.component";
+import { PublicationsComponent } from "./publications/publications.component";
+import { FeaturesComponent } from "./features/features.component";
+import { AcknowledgementComponent } from "./acknowledgement/acknowledgement.component";
+import { HomeComponent } from "./home/home.component";
+import { Imwut2017augComponent } from "./imwut2017aug/imwut2017aug.component";
+import { HeaderBarComponent } from "./header-bar/header-bar.component";
+import { NewsComponent } from "./news/news.component";
+import { RecruitComponent } from "./recruit/recruit.component";
+import { GlobalComponent } from "./global/global.component";
 
+/*
 export function metaFactory(): MetaLoader{
   return new MetaStaticLoader({
       pageTitlePositioning: PageTitlePositioning.PrependPageTitle,
@@ -35,34 +33,36 @@ export function metaFactory(): MetaLoader{
         'og:locale:alternate': 'en_US,ko_KR'
       }
     });
-}
+}*/
 
 const appRoutes: Routes = [
   {
-    path: '',
+    path: "",
     component: AppComponent,
     children: [
-      { path: '',
-      redirectTo: '/main',
-      pathMatch: 'full'
+      {
+        path: "",
+        redirectTo: "/main",
+        pathMatch: "full"
       },
-      { path: 'main',
+      {
+        path: "main",
         component: HomeComponent
         //redirectTo: '/ubicomp2017',
         //pathMatch: 'full'
       },
       {
-        path:'ubicomp2017',
+        path: "ubicomp2017",
         component: Imwut2017augComponent,
-        data: {mainBannerMode: "hidden"}
+        data: { mainBannerMode: "hidden" }
       }
     ]
   },
   {
-    path: 'recruit',
+    path: "recruit",
     component: RecruitComponent
   }
-]
+];
 
 @NgModule({
   declarations: [
@@ -81,20 +81,17 @@ const appRoutes: Routes = [
     RecruitComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule /*
     MetaModule.forRoot({
       provide: MetaLoader,
       useFactory: (metaFactory)
-    }),
-    RouterModule.forRoot(
-      appRoutes,
-      {
-        enableTracing: true,
-        useHash: false
-      }
-    )
+    }),*/,
+    RouterModule.forRoot(appRoutes, {
+      scrollPositionRestoration: "enabled",
+      anchorScrolling: "enabled"
+    })
   ],
   providers: [SharedService, MemberProfileService],
   bootstrap: [GlobalComponent]
 })
-export class AppModule { }
+export class AppModule {}

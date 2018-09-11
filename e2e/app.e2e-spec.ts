@@ -1,6 +1,6 @@
 import { OmniTrackLandingWebPage } from './app.po';
 
-describe('omni-track-landing-web App', () => {
+describe('omnitrack-landing-web App', () => {
   let page: OmniTrackLandingWebPage;
 
   beforeEach(() => {

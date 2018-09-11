@@ -7,7 +7,7 @@
     
     
     <div id="gnb">
-      <a class="hide_smaller_than_desktop" *ngFor="let element of elements" [href]="element.link" routerLinkActive="active">
+      <a class="hide_smaller_than_desktop" *ngFor="let element of elements" (click)="onClicked(element.link)">
         {{element.text}}
       </a>
       <div class="fb-like" data-href="https://omnitrack.github.io" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
@@ -16,7 +16,7 @@
   </div>
 
   <div id="gnb_mobile" class="show_smaller_than_desktop_flex">
-     <a *ngFor="let element of elements" [href]="element.link" routerLinkActive="active">
+     <a *ngFor="let element of elements" (click)="onClicked(element.link)">
         {{element.text}}
       </a>
   </div>

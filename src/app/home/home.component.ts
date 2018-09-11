@@ -23,22 +23,22 @@ export class HomeComponent implements OnInit, AfterContentInit {
   navElements = [
     {
       text: "About",
-      link: "#"+this.id_about
+      link: this.id_about
     },
     {
       text: "Features",
-      link: "#"+this.id_features
+      link: this.id_features
     },{
       text:"Publications",
-      link: "#"+this.id_publications
+      link: this.id_publications
     },
     {
       text: "Team",
-      link: "#"+this.id_team
+      link: this.id_team
     },
     {
       text:"Acknowledgement",
-      link: "#"+this.id_ack
+      link: this.id_ack
     }
   ]
 
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit, AfterContentInit {
   }
 
   ngAfterContentInit(){
-    this.shared.setGnbElements(this.navElements)
+    this.shared.setGnbElements(this.navElements, ['./main'])
   }
 
 }
