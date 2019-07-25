@@ -14,7 +14,7 @@ export class MemberProfileService {
 
   readonly yhkim = {
         name: "Young-Ho Kim",
-        title: "Ph.D Candidate",
+        title: "Postdoc",
         affiliation: "Seoul Nat'l University",
         email: "yhkim (at) hcil.snu.ac.kr",
         web: "http://younghokim.net",
