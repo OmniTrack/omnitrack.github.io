@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^7.2.14",
     "@angular/router": "^7.2.14",
     "core-js": "^2.6.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "typescript": "^3.2.4",
     "zone.js": "^0.9.1"
   },
