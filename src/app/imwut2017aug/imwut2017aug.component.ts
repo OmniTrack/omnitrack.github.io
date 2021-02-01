@@ -27,6 +27,11 @@ export class Imwut2017augComponent implements OnInit {
       text: "Authors",
       link: "section_authors"
     },
+    {
+      text: "Acknowledgment",
+      link: "section_acknowledgment"
+    },
+
   ]
 
   dataset = [
