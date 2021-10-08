@@ -5,9 +5,9 @@ export class MemberProfileService {
 
   readonly jhjeon ={
           name: "Jae Ho Jeon",
-          title: "Developer",
-          affiliation: "Kakao Corp.",
-          email: "jay.jh (at) kakaocorp.com",
+          title: "Software Engineer",
+          affiliation: "Google",
+          email: "jaehojeon (at) google.com",
           web: "#",
           thumb:"jhjeon_portrait.jpg"
         }
@@ -15,15 +15,15 @@ export class MemberProfileService {
   readonly yhkim = {
         name: "Young-Ho Kim",
         title: "Postdoc",
-        affiliation: "Seoul Nat'l University",
-        email: "yhkim (at) hcil.snu.ac.kr",
+        affiliation: "University of Maryland",
+        email: "yghokim (at) umd.edu",
         web: "http://younghokim.net",
         thumb:"yhkim_portrait.jpg"
-  } 
-  
+  }
+
   readonly blee = {
     name: "Bongshin Lee",
-    title: "Senior Researcher",
+    title: "Sr. Principal Researcher",
     affiliation: "Microsoft Research",
     email: "bongshin (at) microsoft.com",
     web: "http://bongshiny.com",
@@ -32,7 +32,7 @@ export class MemberProfileService {
 
   readonly echoe = {
     name: "Eun Kyoung Choe",
-    title: "Assistant Professor",
+    title: "Associate Professor",
     affiliation: "University of Maryland",
     email: "choe (at) umd.edu",
     web:"http://eunkyoungchoe.com",
@@ -50,17 +50,17 @@ export class MemberProfileService {
 
   readonly jhkim = {
     name: "Junhoe Kim",
-    title: "Undergraduate Student",
-    email: "jhkim (at) hcil.snu.ac.kr",
-    affiliation: "Seoul Nat'l University",
+    title: "Software Engineer",
+    email: "",
+    affiliation: "NCSOFT",
     thumb: "jhkim_portrait.jpg"
   }
 
   readonly valerie = {
     name: "Valérie Erb",
-    title: "Undergraduate Student",
-    email: "valerieerb (at) gmail.com",
-    affiliation: "Universität Zürich",
+    title: "Master Student",
+    email: "",
+    affiliation: "KAIST",
     thumb: "valerie_portrait.jpg"
   }
 
