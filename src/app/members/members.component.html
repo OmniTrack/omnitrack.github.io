@@ -1,7 +1,11 @@
 <h1>{{title}}</h1>
+
+
+<p class="small"><sup>1</sup>: Did this work while at Seoul National University.</p>
+
 <div class="members">
   <div class="member" *ngFor="let member of members">
-    
+
   <a href="{{member.web}}" target=_blank>
     <div class="member_content">
     <div class="thumb">
@@ -9,7 +13,7 @@
     </div>
     <div class="information">
       <div class="name">
-        {{member.name}}
+        {{member.name}}<sup *ngIf="member.sup != null">{{member.sup}}</sup>
       </div>
       <div class="description">
         {{member.title}}<br>
@@ -27,7 +31,7 @@
 <div *ngIf="contributors">
   <h3>Contributors</h3>
   <div class="members">
-    <div class="member" *ngFor="let member of contributors">    
+    <div class="member" *ngFor="let member of contributors">
       <a href="{{member.web}}" target=_blank>
         <div class="member_content">
         <div class="thumb">
@@ -35,7 +39,7 @@
         </div>
         <div class="information">
           <div class="name">
-            {{member.name}}
+            {{member.name}}<sup *ngIf="member.sup != null">{{member.sup}}</sup>
           </div>
           <div class="description">
             {{member.title}}<br>
@@ -54,7 +58,7 @@
 <div *ngIf="alumni">
   <h3>Past Members</h3>
   <div class="members">
-    <div class="member" *ngFor="let member of alumni">    
+    <div class="member" *ngFor="let member of alumni">
       <a href="{{member.web}}" target=_blank>
         <div class="member_content">
         <div class="thumb">
@@ -62,7 +66,7 @@
         </div>
         <div class="information">
           <div class="name">
-            {{member.name}}
+            {{member.name}}<sup *ngIf="member.sup != null">{{member.sup}}</sup>
           </div>
           <div class="description">
             {{member.title}}<br>
